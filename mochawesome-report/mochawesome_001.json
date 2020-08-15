@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-10T08:22:02.213Z",
+    "end": "2020-07-10T08:23:15.870Z",
+    "duration": 73657,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b497ec85-d6df-4b74-8ac0-0ad5e946b275",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Accelerated choice.js",
+      "file": "cypress\\integration\\examples\\Accelerated choice.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b554aa2c-35c0-4531-8c38-51d2b7ba7cf1",
+          "title": "Login with Create study",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the tiitle Page",
+              "fullTitle": "Login with Create study verify the tiitle Page",
+              "timedOut": null,
+              "duration": 49996,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://marc.purespectrum.net');",
+              "err": {},
+              "uuid": "e0756751-2361-46f5-ba5c-74fca1955147",
+              "parentUUID": "b554aa2c-35c0-4531-8c38-51d2b7ba7cf1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify the tiitle Page",
+              "fullTitle": "Login with Create study verify the tiitle Page",
+              "timedOut": null,
+              "duration": 9493,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[type=email]').type(\"ankur.ongraph@gmail.com\", {\n  force: true\n});\ncy.get('input[type=password]').type(12345, {\n  force: true\n});\ncy.contains(' Sign in ').click();\ncy.clearCookies();",
+              "err": {},
+              "uuid": "8d361de8-e324-4bb5-a8d5-88bc39263d6b",
+              "parentUUID": "b554aa2c-35c0-4531-8c38-51d2b7ba7cf1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Survey Attributes ",
+              "fullTitle": "Login with Create study Enter Survey Attributes ",
+              "timedOut": null,
+              "duration": 10606,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Research Products').click();\ncy.get('.product_row > :nth-child(2)').contains('Get Started').click();\ncy.get(':nth-child(2) > :nth-child(1) > .form-control').type('Automation Test');\ncy.get(':nth-child(4) > :nth-child(1) > .form-control').type('201001');\ncy.get('#step-2 > :nth-child(2) > :nth-child(1)').click();\ncy.contains('Business').click();\ncy.get('#step-2 > :nth-child(3) > :nth-child(1) > .cstm_dropdown > .ng-select-container').click();\ncy.contains('Events').click();\ncy.get(':nth-child(4) > :nth-child(1) > .cstm_dropdown').click();\ncy.contains('Sports').click();\ncy.get(':nth-child(1) > :nth-child(1) > [placeholder=\"\"]').type('QA1');\ncy.get(':nth-child(1) > .right-angle-btn > img').click();\ncy.get('#levels_modal0 > .modal-dialog > .modal-content > .modal-body > .filters > :nth-child(1) > .filters_wrap > .filter_cat > .filter_cat_row > :nth-child(1) > .form-control').type('its my one case');\ncy.get('#levels_modal0 > .modal-dialog > .modal-content > .modal-body > .filters > :nth-child(1) > .filters_wrap > .filter_cat > .filter_cat_row > :nth-child(2) > .form-control').type('Its my second case');\ncy.contains(' Close ').click();\ncy.get(':nth-child(2) > [placeholder=\"\"]').type('QA2');\ncy.get(':nth-child(2) > .right-angle-btn > img').click();\ncy.get('#levels_modal1 > .modal-dialog > .modal-content > .modal-body > .filters > :nth-child(1) > .filters_wrap > .filter_cat > .filter_cat_row > :nth-child(1) > .form-control').type(\"second test\");\ncy.get('#levels_modal1 > .modal-dialog > .modal-content > .modal-body > .filters > :nth-child(1) > .filters_wrap > .filter_cat > .filter_cat_row > :nth-child(2) > .form-control').type('third test');\ncy.get('#levels_modal1 > .modal-dialog > .modal-content > .modal-header > .close').click();\ncy.get(':nth-child(1) > :nth-child(1) > .ng-select > .ng-select-container > .ng-value-container > .ng-input').click();\ncy.contains('its my one case').click();\ncy.get(':nth-child(2) > .ng-select > .ng-select-container > .ng-value-container > .ng-input').click();\ncy.contains('second test').click(); //Added CustomQuestions\ncy.get('#customQuestionToggleYes').click();\ncy.get('#addQsnBtn_0').contains(' + Add Custom Question ').click();\ncy.get(':nth-child(1) > [_ngcontent-c6=\"\"] > app-input > .demo-full-width > .cstm_input_field').type('CUstom1');\ncy.get('#type2').click();\ncy.get(':nth-child(3) > [_ngcontent-c6=\"\"] > app-input > .demo-full-width > .cstm_input_field').type('Which Company  Credit Card do you have');\ncy.scrollTo('bottom');\ncy.get(':nth-child(2) > :nth-child(1) > app-input > .demo-full-width > .cstm_input_field').type('Mastercard');\ncy.get('.add-button').click();\ncy.get(':nth-child(2) > :nth-child(2) > :nth-child(1) > app-input > .demo-full-width > .cstm_input_field').type('VISA');\ncy.contains(' Save ').click(); // cy.contains(' Confirm and Launch! ').click()",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.product_row > :nth-child(2)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.product_row > :nth-child(2)`, but never found it.\n    at Context.eval (eval at <anonymous> (https://marc.purespectrum.net/__cypress/runner/cypress_runner.js:169217:16), <anonymous>:20:8)",
+                "diff": null
+              },
+              "uuid": "ad6bd941-8d51-4493-9e6f-40fec5eba6e5",
+              "parentUUID": "b554aa2c-35c0-4531-8c38-51d2b7ba7cf1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e0756751-2361-46f5-ba5c-74fca1955147",
+            "8d361de8-e324-4bb5-a8d5-88bc39263d6b"
+          ],
+          "failures": [
+            "ad6bd941-8d51-4493-9e6f-40fec5eba6e5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 70095,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

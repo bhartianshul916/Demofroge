@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-10T08:23:37.722Z",
+    "end": "2020-07-10T08:24:49.576Z",
+    "duration": 71854,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "46a645ce-3269-4c8e-b94b-0af59435b53a",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\logintest.js",
+      "file": "cypress\\integration\\examples\\logintest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "99483bdc-7c24-4ce3-ac4b-c86275b52e40",
+          "title": "Login with Create study",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the tiitle Page",
+              "fullTitle": "Login with Create study verify the tiitle Page",
+              "timedOut": null,
+              "duration": 51365,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://ong.purespectrum.net'); //we are redirecting to  marc storefront page \n// cy.title.should('eq','Forge Storefront')",
+              "err": {},
+              "uuid": "3066dc9a-fac8-45a9-8b65-08a6fe9f3bce",
+              "parentUUID": "99483bdc-7c24-4ce3-ac4b-c86275b52e40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify the tiitle Page",
+              "fullTitle": "Login with Create study verify the tiitle Page",
+              "timedOut": null,
+              "duration": 6340,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// user able to login with valid credential\ncy.get('input[type=email]').type(\"ankur.ongraph@gmail.com\", {\n  force: true\n});\ncy.get('input[type=password]').type(12345, {\n  force: true\n});\ncy.contains(' Sign in ').click();",
+              "err": {},
+              "uuid": "b792e10b-ef4d-49d6-b499-78dcbc8775fa",
+              "parentUUID": "99483bdc-7c24-4ce3-ac4b-c86275b52e40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create study Page",
+              "fullTitle": "Login with Create study Create study Page",
+              "timedOut": null,
+              "duration": 9767,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// create a study \ncy.contains('Research Products').click();\ncy.get('.product_row > :nth-child(4)').contains('Get Started').click();\ncy.get('#step-1 > :nth-child(2) > :nth-child(1)').type('First Auomation study creation');\ncy.get('#step-1 > :nth-child(3) > :nth-child(1)').type(50301);\ncy.contains('Concepts Being Tested Are?');\ncy.get('#step-1 > :nth-child(4) > :nth-child(1)');\ncy.get('.normal_btn > :nth-child(2)').click(); // cy.get('#step-1 > :nth-child(5) > :nth-child(1) > :nth-child(1)')\ncy.contains('Title 1');\ncy.get(':nth-child(1) > div.ng-untouched > span > .form-control').type('test');\ncy.contains('Text 1');\ncy.get(':nth-child(1) > div.ng-invalid > .ng-untouched').type('abc');\ncy.contains('Title 2');\ncy.get(':nth-child(2) > div.ng-untouched > span > .form-control').type('test2');\ncy.contains('Text 2');\ncy.get(':nth-child(2) > div.ng-untouched > [formcontrolname=\"value\"]').type('abc2');\ncy.contains('Title 3');\ncy.get(':nth-child(3) > div.ng-untouched > span > .form-control').type('test3');\ncy.contains('Text 3');\ncy.get(':nth-child(3) > div.ng-untouched > [formcontrolname=\"value\"]').type('abc3');\ncy.contains('Attribute 1');\ncy.get(':nth-child(2) > div.ng-pristine > .form-control').type('testhl');\ncy.contains('Attribute 2');\ncy.get(':nth-child(3) > div.ng-pristine > .form-control').type('testx'); // Adding Custom questions//\ncy.get('#customQuestionToggleYes').click();\ncy.get('#addQsnBtn_0').contains('+ Add Custom Question').click();\ncy.get(':nth-child(1) > [_ngcontent-c6=\"\"] > app-input > .demo-full-width > .cstm_input_field').type('CS1');\ncy.get('#type2').click();\ncy.get(':nth-child(3) > [_ngcontent-c6=\"\"] > app-input > .demo-full-width > .cstm_input_field').type('HOW MANY MEMBER DO YOU HAVE');\ncy.scrollTo('bottom');\ncy.get(':nth-child(2) > :nth-child(1) > app-input > .demo-full-width > .cstm_input_field').type('five');\ncy.get('.add-button').click();\ncy.get(':nth-child(2) > :nth-child(2) > :nth-child(1) > app-input > .demo-full-width > .cstm_input_field').type('Seven');\ncy.get('.add-button').click();\ncy.get(':nth-child(3) > :nth-child(2) > :nth-child(1) > app-input > .demo-full-width > .cstm_input_field').type('Two');\ncy.contains(' Save ').click();\ncy.contains(' Confirm and Launch! ').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.product_row > :nth-child(4)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.product_row > :nth-child(4)`, but never found it.\n    at Context.eval (https://ong.purespectrum.net/__cypress/tests?p=cypress\\integration\\examples\\logintest.js:22:8)",
+                "diff": null
+              },
+              "uuid": "e1aa1b9b-4594-4ee9-bb3f-538be1c6f355",
+              "parentUUID": "99483bdc-7c24-4ce3-ac4b-c86275b52e40",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3066dc9a-fac8-45a9-8b65-08a6fe9f3bce",
+            "b792e10b-ef4d-49d6-b499-78dcbc8775fa"
+          ],
+          "failures": [
+            "e1aa1b9b-4594-4ee9-bb3f-538be1c6f355"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 67472,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
