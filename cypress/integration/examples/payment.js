@@ -1,12 +1,12 @@
-describe("Login with Create study",function()
+describe("End to End study flow",function()
 {
-    it('verify the SignIn Page',function()
+    it('visit the URL',function()
     {
         cy.visit('https://ong.purespectrum.net')          //we are redirecting to  marc storefront page 
         // cy.title.should('eq','Forge Storefront')
     })
 
-    it('verify the tiitle Page',function()
+    it('verify the Login',function()
     {                                                    // user able to login with valid credential
         cy.get('input[type=email]')
         .type("ankur.ongraph@gmail.com",{force: true})
@@ -15,9 +15,13 @@ describe("Login with Create study",function()
         cy.contains(' Sign in ').click()
     })
     it('Create study Page',function()
-    {                                                     // create a study 
+    {     
+        cy.url()
+        .should('include','/studies')                                               // create a study 
         cy.contains('Research Products').click()
         cy.get('.product_row > :nth-child(4)').contains('Get Started').click()
+        cy.url()
+        .should('include','/research-products/4/study-create')
         cy.get('#step-1 > :nth-child(2) > :nth-child(1)')
         .type('End to End Auomation study')
         cy.get('#step-1 > :nth-child(3) > :nth-child(1)')
@@ -50,17 +54,21 @@ describe("Login with Create study",function()
         cy.contains('Attribute 2')
         cy.get(':nth-child(3) > div.ng-pristine > .form-control')
         .type('testx')
-        cy.get('#launch_button').click()
+        cy.get('#launch_button').click()   // Study Launch
+        cy.wait(4000)
         // //PAYMENT MODULE
         cy.get('body')
         cy.wait(4000)
+        cy.get('modal[_ngcontent-c13=""] > .modal > .modal-inner > .modal-content')
         cy.get("iframe").then( $iframe => {
         const $doc = $iframe.contents();
+        cy.wait(4000)               // Enter Credit Card details
         cy.wrap( $doc.find("#credit-card-number") ).type( "2223000048400011", { force: true });
         cy.wrap( $doc.find("#expiration") ).type('52023',{ force: true });
         cy.wrap( $doc.find("#cvv") ).type('024',{ force: true });
         cy.wrap( $doc.find("#postal-code") ).type('00501',{ force: true });
         });
-        cy.contains(' Cancel Transaction & Save as draft ').click()
+        cy.get('#submit-button').click()
+        // cy.contains(' Cancel Transaction & Save as draft ').click()
      })
 })
