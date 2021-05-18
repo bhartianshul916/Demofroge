@@ -1,9 +1,10 @@
 {
   "chromeWebSecurity": false,
-   "reporter": "mochawesome",
-    "reporterOptions": {
-      "overwrite": false,
-      "html": true,
-      "json": true
-    }
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": true,
+    "json": true
+  },
+  "projectId": "cde49s"
 }
